@@ -453,7 +453,61 @@ void func_01F70780_amusement_01() {
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/Event/amusement_01", func_01F70870_amusement_01);
+void func_01F70870_amusement_01() {
+    short room;
+
+    D_01F74CF8_amusement_01 = 0;
+    room = RoomName();
+    D_01F74C88_amusement_01 = 0;
+    D_01F74DB0_amusement_01 = 0;
+    D_1D3169C &= ~0x1000;
+
+    switch (room) {
+        case 0xD8:
+        case 0xD9:
+        case 0xDA:
+        case 0xE0:
+        case 0xE1:
+        case 0xE2:
+        case 0xE3:
+        case 0xE4:
+        case 0xE5:
+        case 0xE6:
+        case 0xE7:
+            break;
+        
+        case BORLEY_HAUNTED_MANSION_DINING_ROOM:
+            if (func_001646F0() != 0) {
+                func_00164810();
+            }
+            break;
+        case BORLEY_HAUNTED_MANSION_DANNY_ROOM:
+            if (func_001646F0() != 0) {
+                func_00164810();
+            }
+            break;
+        case BORLEY_HAUNTED_MANSION_SPIKE_ROOM:
+            if (func_001646F0() != 0) {
+                func_00164810();
+            }
+            D_01F74C90_amusement_01 = 0;
+            break;
+        case BORLEY_HAUNTED_MANSION_MAZE_1_ROOM:
+            if (func_001646F0() != 0) {
+                func_00164810();
+            }
+            D_01F74C80_amusement_01 = 0;
+            D_01F74CB8_amusement_01 = 0;
+            D_1D316A0 &= ~0x10;
+            break;
+        case BORLEY_HAUNTED_MANSION_MAZE_2_ROOM:
+            if (func_001646F0() != 0) {
+                func_00164810();
+            }
+            D_01F74CB8_amusement_01 = 0;
+            D_1D316A0 &= ~0x10;
+        }
+}
 
 void func_01F709D0_amusement_01(void) {
     SubCharacter* douglas;

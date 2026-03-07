@@ -7,6 +7,12 @@
 #define DANNY_CHARA_ID 0x1043
 #define DANNY_ID 0x171
 
+#define BORLEY_HAUNTED_MANSION_DINING_ROOM  0xDB
+#define BORLEY_HAUNTED_MANSION_DANNY_ROOM   0xDC
+#define BORLEY_HAUNTED_MANSION_SPIKE_ROOM   0xDD
+#define BORLEY_HAUNTED_MANSION_MAZE_1_ROOM  0xDE
+#define BORLEY_HAUNTED_MANSION_MAZE_2_ROOM  0xDF
+
 typedef struct Amusement01Work {
     u_char unk_0x0[0x20];
     float x; // 0x20
@@ -83,6 +89,12 @@ extern int D_01F71460_amusement_01;
 extern float D_01F746C0_amusement_01;
 extern int D_01F74D90_amusement_01;
 extern int D_01F74CF8_amusement_01;
+extern int D_01F74C80_amusement_01;
+extern int D_01F74C90_amusement_01;
+extern int D_01F74CB8_amusement_01;
+extern int D_01F74CF8_amusement_01;
+extern int D_01F74DB0_amusement_01;
+extern int D_1D316A0;
 extern int D_1D316AC;
 extern int RoomName();
 extern u_int D_1D31648;
