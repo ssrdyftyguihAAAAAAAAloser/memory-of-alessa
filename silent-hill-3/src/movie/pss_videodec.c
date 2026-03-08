@@ -124,7 +124,7 @@ void videoDecMain(VideoDec* vd) {
         debugPrintf("decBs0() failed\n");
     }
 
-    while(voBuf.size != 0) {
+    while(voBuf.count != 0) {
         if (videoDecGetState(vd) == VD_STATE_ABORT) {
             debugPrintf("decBs0() failed\n");
             break;

@@ -439,6 +439,15 @@ viBufPutTs = 0x002b86d0;
 viBufGetTs = 0x002b8800;
 @115 = 0x0039DC00; // visibility:local
 
+// pss_vobuf.c
+voBufCreate = 0x002B9420;
+voBufDelete = 0x002B9500;
+voBufIsFull = 0x002B9520;
+voBufIncCount = 0x002B9540;
+voBufGetData = 0x002B95B0;
+voBufIsEmpty = 0x002B9600;
+voBufGetTag = 0x002B9610;
+
 // more sdk stuff
 CreateSema = 0x001DC150;
 WaitSema = 0x001DC190;

@@ -5,9 +5,6 @@
 
 #include "common.h"
 
-#define MAX_WIDTH 640
-#define MAX_HEIGHT 480
-
 #define SCE_MPEG_BUFFER_SIZE(w, h) ((w) * (h) * 9 / 2 + 512 + 24 * 64 + 8192)
 
 typedef enum
