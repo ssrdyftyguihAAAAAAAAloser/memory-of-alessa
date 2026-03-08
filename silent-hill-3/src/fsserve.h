@@ -17,6 +17,10 @@ typedef struct unk_00488E50
     int unk2C;
 } unk_00488E50;
 
+void func_00154CD0(int arg2);
+int func_00154D10(u_short arg0);
+int func_00172EF0(u_short, void (*)(int), int);
+
 extern int D_00488E40[];
 extern int D_00484E40[];
 extern int *D_00357978; // = (void*)&D_00488E40;

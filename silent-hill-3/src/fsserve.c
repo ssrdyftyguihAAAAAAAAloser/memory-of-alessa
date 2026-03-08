@@ -197,17 +197,52 @@ INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154950);
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_001549B0);
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154B10);
+int func_00154B10(int* arg0) {
+    int ret;
+
+    func_00152C20();
+    ret = func_00154B60(arg0);
+    func_00152C60();
+
+    return ret;
+}
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154B60);
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154C30);
+int func_00154C30(int arg0, int arg1, int arg2) {
+    int ret;
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154C90);
+    func_00152C20();
+    ret = func_00154C90(arg0, arg1, arg2);
+    func_00152C60();
+
+    return ret;
+}
+
+
+int func_00154C90(int arg0, int arg1, int arg2) {
+    func_00154DB0(arg0, arg1, arg2);
+}
+
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154CD0);
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154D10);
+int func_00154D10(u_short arg0) {
+    int temp_v0;
+    int ret;
+
+    ret = 0;
+    temp_v0 = func_00172C90(1, 0, 0);
+    if (temp_v0 >= 0) {
+        if (func_00172EF0(arg0, func_00154CD0, temp_v0) >= -1) {
+            func_00172DD0(temp_v0);
+            ret = 1;
+        }
+        func_00172D10(temp_v0);
+    }
+
+    return ret;
+}
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154DB0);
 
