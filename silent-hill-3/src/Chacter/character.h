@@ -181,49 +181,39 @@ typedef struct
 typedef struct SubCharacter
 {
 
-    int index;          // 0x0
-    u_int status;       // 0x4
-    u_int step;         // 0x8
-
-    u_short kind;       // 0xC
-    u_short id;         // 0xE
-    u_short unk10;      // 0x10
-    short unk12;        // 0x12
-    u_int sub_st;       // 0x14
-    u_int model_type;   // 0x16
-
-    Vector4 pos;        // 0x20
-    Vector4 rot;        // 0x30
-    Vector4 pos_spd;    // 0x40
-    Vector4 rot_spd;    // 0x50
-
-    int unk60[8];       // 0x60
-    int unk80;          // 0x80
-    int unk84[7];       // 0x84
-
-    void (*function)(struct SubCharacter *); // 0xA0
-
-    struct shSkelton *sk_top; // 0xA4
-
-    int unkA8[4]; // 0xA8
-
-    struct SubCharacter *pre; // 0xB8
-    struct SubCharacter *next; // 0xBC
-
-    int unkC0[18];    // 0xC0
-    int unk108[0x28]; // 0x108
-
-    u_char work[4];
-
-    u_int unk1AC;
-    u_int unk1B0;
-    u_int unk1B4;
-    u_int unk1Bc;
-    u_int unk1C0;
-    u_int unk1C4;
-    u_int unk1C8;
-    u_int unk1D0;
-    u_int unk1D4;
+    /* 0x0 */   int index;          
+    /* 0x4 */   u_int status;       
+    /* 0x8 */   u_int step;         
+    /* 0xC */   u_short kind;       
+    /* 0xE */   u_short id;         
+    /* 0x10 */  u_short unk10;      
+    /* 0x12 */  short unk12;        
+    /* 0x14 */  u_int sub_st;       
+    /* 0x16 */  u_int model_type;   
+    /* 0x20 */  Vector4 pos;        
+    /* 0x30 */  Vector4 rot;        
+    /* 0x40 */  Vector4 pos_spd;    
+    /* 0x50 */  Vector4 rot_spd;    
+    /* 0x60 */  int unk60[8];       
+    /* 0x80 */  int unk80;          
+    /* 0x84 */  int unk84[7];       
+    /* 0xA0 */  void (*function)(struct SubCharacter *);
+    /* 0xA4 */  struct shSkelton *sk_top;
+    /* 0xA8 */  int unkA8[4];
+    /* 0xB8 */  struct SubCharacter *pre;
+    /* 0xBC */  struct SubCharacter *next;
+    /* 0xC0 */  int unkC0[18];   
+    /* 0x108 */ int unk108[0x28];
+    /* 0x1A8 */ u_char work[4];
+    /* 0x1AC */ u_int unk1AC;
+    /* 0x1B0 */ u_int unk1B0;
+    /* 0x1B4 */ u_int unk1B4;
+    /* 0x1BC */ u_int unk1BC;
+    /* 0x1C0 */ u_int unk1C0;
+    /* 0x1C4 */ u_int unk1C4;
+    /* 0x1C8 */ u_int unk1C8;
+    /* 0x1D0 */ u_int unk1D0;
+    /* 0x1D4 */ u_int unk1D4;
 } SubCharacter;
 
 typedef struct sh3gfw_ModelDraw_MAN
