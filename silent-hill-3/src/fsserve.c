@@ -274,4 +274,4 @@ INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154DB0);
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_00155080);
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_001550D0);
+INCLUDE_ASM("asm/nonmatchings/fsserve", LoadAr);

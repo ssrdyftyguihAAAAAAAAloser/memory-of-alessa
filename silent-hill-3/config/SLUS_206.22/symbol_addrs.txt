@@ -338,6 +338,10 @@ SetBulletAdjust = 0x0019a460;
 
 GetMessageStation = 0x0016f2c0;
 fsMfArReport = 0x00151a90;
+LoadAr = 0x001550d0;
+fsAdxfInit = 0x00152f90;
+adxFileOpen = 0x0025d190;
+rebootIop = 0x00155d00;
 
 // hh_class_wrapper
 ViewFrustum_Primitive_ClipMatrix_Create = 0x00142500;

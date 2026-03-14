@@ -286,7 +286,7 @@ INCLUDE_ASM("asm/nonmatchings/Event/amusement_01", func_01F6F430_amusement_01);
 int func_01F6F4E0_amusement_01(void) {
     SubCharacter* scp;
     int ret = func_0016C540(&D_01F748F0_amusement_01, &D_01F74950_amusement_01);
-    scp = shCharacterGetSubCharacter(0x104, 0x178);
+    scp = shCharacterGetSubCharacter(DOUGLAS_CC_CHARA_ID, 0x178);
     if (ret != 0) {
         if (func_0019A9B0(2.0f) != 0) {
             scp->pos.x = -59676.0f;
@@ -314,7 +314,7 @@ int func_01F6F5C0_amusement_01(void) {
         D_01F74C88_amusement_01 += 1;
         /* fallthrough */
     case 1:
-        scp = shCharacterGetSubCharacter(0x104, 0x178);
+        scp = shCharacterGetSubCharacter(DOUGLAS_CC_CHARA_ID, 0x178);
         break;
     }
     if (ret != 0) {
@@ -360,7 +360,7 @@ int func_01F6F7A0_amusement_01(void) {
     float temp_f1;
     int temp_s1;
 
-    heather = shCharacterGetSubCharacter(0x100, -1);
+    heather = shCharacterGetSubCharacter(HEATHER_CHARA_ID, -1);
     switch (D_01F74C88_amusement_01) {              /* irregular */
         case 0:
             func_00190A20(2);
