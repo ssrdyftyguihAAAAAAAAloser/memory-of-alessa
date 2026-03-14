@@ -497,7 +497,7 @@ int func_01F6FC80_amusement_01() {
             }
             D_01F74C88_amusement_01 = 2;
             D_1D3169C |= 0x8000;
-            func_0016D6B0(0x46U);
+            ItemGet(0x46U);
             SeCall(1.0f, 0.0f, 0x2B21);
             func_00317490(0x46, 0.2f);
         case 2:
@@ -527,7 +527,7 @@ int func_01F6FDC0_amusement_01() {
         case 1:
             D_01F74C88_amusement_01 = 2;
             D_1D3169C |= 0x10000;
-            func_0016D6B0(0x47U);
+            ItemGet(0x47U);
             SeCall(1.0f, 0.0f, 0x2B21);
             func_00317490(0x47, 0.2f);
             /* fallthrough */

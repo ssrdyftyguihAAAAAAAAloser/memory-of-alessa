@@ -16,7 +16,7 @@ void func_0016C1B0();
 int func_0016C1C0(u_int);
 void func_0016C3C0();
 void func_0016CA40(int);
-void func_0016D6B0(u_int);
+void ItemGet(u_int);
 void func_00189F00();
 void func_00189FA0(int, int);
 void func_00190A20(u_int);

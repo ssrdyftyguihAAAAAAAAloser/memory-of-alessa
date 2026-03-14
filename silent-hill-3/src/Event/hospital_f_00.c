@@ -105,7 +105,7 @@ int func_01F6D920_hospital_f_00(void) {
         if (func_0016C1C0(0xF) == 0) {
             return 0;
         }
-        func_0016D6B0(0x12);
+        ItemGet(0x12);
         D_1D31688 |= 0x1000;
     }
 

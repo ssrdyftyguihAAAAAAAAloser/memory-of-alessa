@@ -12,7 +12,8 @@
 #define HOSPITAL_1F_C2_ROOM         0xA4
 #define HOSPITAL_1F_C4_ROOM         0xA5
 
-typedef struct {
+typedef struct
+{
     s32 unk00;
     s32 unk04;
     s32 unk08;
@@ -21,7 +22,8 @@ typedef struct {
     u8 unk0F;
 } PictureLoad;
 
-typedef struct {
+typedef struct
+{
     s32 unk00;
     s32 unk04;
     s32 unk08;
@@ -61,7 +63,8 @@ typedef struct {
     s16 unk42;
 } Picture;
 
-typedef struct {
+typedef struct
+{
     PictureLoad unk00;
     PictureLoad unk10;
     Picture unk20;
@@ -69,9 +72,10 @@ typedef struct {
     u32 unkA8;
     s32 unkAC;
     s32 unkB0;
-} PictureGroup; //I think this is something specific for this overlay, this will work only here
+} PictureGroup; // I think this is something specific for this overlay, this will work only here
 
-typedef struct {
+typedef struct
+{
     float unk0;
     int unk4;
 } Struct_01F6DA80_hospital_f_00;
@@ -84,7 +88,7 @@ int func_00168440();
 int func_00170410(int);
 int func_0019B580(int);
 int func_001C2580(int);
-int func_001E2110(SubCharacter*);
+int func_001E2110(SubCharacter *);
 int shCharacter_Manage_Delete(u_short kind, u_short id);
 
 int func_0016BED0(int, int);
@@ -101,30 +105,30 @@ void func_0013D280(int);
 void func_0015DCD0(float, float, int, float *, int, int);
 
 void func_0016CA40(int);
-void func_0016CD00(int*);
+void func_0016CD00(int *);
 void func_0016C1A0();
 void func_0016C1B0();
 void func_0016C3C0();
-void func_0016D6B0(u_int);
+void ItemGet(u_int);
 void func_0016ECE0(int);
 void func_0016BBF0();
 void func_0016BC00(int);
 void func_0016F550(int, int);
 
-void func_0018FE60(__int128*);
+void func_0018FE60(__int128 *);
 void func_00190A20(int);
 void func_001C2290(int, float);
-void func_001C7BC0(Q*, Q*, Q*, int);
+void func_001C7BC0(Q *, Q *, Q *, int);
 void func_00316C50(int);
 
 void PictureDraw(void *);
 void PictureLoadImage(void *);
-void shQzero(void*, int);
+void shQzero(void *, int);
 void SeCall(float, float, int);
 
-void func_001DE5B0(void (*)(), PictureGroup *, s32); //maybe this is the problem
+void func_001DE5B0(void (*)(), PictureGroup *, s32); // maybe this is the problem
 
-void *func_00156410(int); //not sure
+void *func_00156410(int); // not sure
 SubCharacter *shCharacterGetSubCharacter(short kind, short id);
 
 extern Q D_01F6F9D0_hospital_f_00;
@@ -147,7 +151,7 @@ extern float D_01F6F940_hospital_f_00;
 extern float D_01F6F9A0_hospital_f_00;
 
 extern Struct_01F6DA80_hospital_f_00 D_01F6F930_hospital_f_00;
-extern Struct_01F6DA80_hospital_f_00* D_01F6FAB8_hospital_f_00;
+extern Struct_01F6DA80_hospital_f_00 *D_01F6FAB8_hospital_f_00;
 
 extern u_int D_1D31644;
 extern u_int D_1D31680;

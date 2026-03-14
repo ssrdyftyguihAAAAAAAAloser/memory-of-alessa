@@ -139,3 +139,5 @@ INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", func_001A7250);
 INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", func_001A7450);
 
 INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", func_001A7660);
+
+INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", clPermitColumnExpansion);

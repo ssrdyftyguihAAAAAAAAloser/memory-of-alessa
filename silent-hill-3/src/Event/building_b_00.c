@@ -28,7 +28,7 @@ int func_01F6D9B0_building_b_00(void) {
             func_00317490(0x3A, 0.2f);
             func_0016C3C0();
             SeCall(1.0f, 0.0f, 0x2B21);
-            func_0016D6B0(0x3A);
+            ItemGet(0x3A);
             D_1D31670[0] |= 0x1000;
             D_01F6FB00_building_b_00 += 1;
         default:

@@ -346,7 +346,7 @@ u16 *fontGetMesAdr(u16 *str, u16 num)
 INCLUDE_ASM("asm/nonmatchings/Font/font", fontGetMesAdr);
 #endif
 
-INCLUDE_ASM("asm/nonmatchings/Font/font", func_0015D1A0);
+INCLUDE_ASM("asm/nonmatchings/Font/font", fontMessageNum);
 
 void fontMessage(u16 *str)
 {

@@ -36,6 +36,7 @@ fontSetBlankBox = 0x158990;
 fontSetLine = 0x158ae0;
 fontSet = 0x158620;
 fontGetMesAdr = 0x15d150;
+fontMessageNum = 0x0015d1a0;
 
 // model3_n.c
 Model3NSkeletons = 0x1D2E70;
@@ -321,12 +322,31 @@ ObjectInstance_DataBlock_Get = 0x00142190;
 // this TU isn't in SH2, but there's a string that refers to it.
 ItemMenuSelect = 0x002b1420;
 
+// item.c
+ItemDataInit = 0x0016d600;
+ItemGet = 0x0016d6b0;
+
 // sh3 stuff
 blood_color = 0x1d880c2; // type:u8
 blood_volume = 0x1d880c4; // type:u8
-GetBloodVolume = 0x0019a430;
+bullet_adjust = 0x01d88019;
+
 GetBloodColor = 0x0019a3f0;
+GetBloodVolume = 0x0019a430;
+GetBulletAdjust = 0x0019a470;
+SetBulletAdjust = 0x0019a460;
+
 GetMessageStation = 0x0016f2c0;
+fsMfArReport = 0x00151a90;
+
+// hh_class_wrapper
+ViewFrustum_Primitive_ClipMatrix_Create = 0x00142500;
+ViewFrustum_BoundingBox_ClipMatrix_Create = 0x00142790;
+AlwaysFront_WorldView_Matrix_Create = 0x00142870;
+HH_ClassWrapper_Point_Clip_Judge = 0x00142aa0;
+HH_ClassWrapper_ViewFrustum_Primitive_ClipMatrix_Get = 0x00142b40;
+HH_ClassWrapper_Float_Clamp = 0x00142be0;
+HH_ClassWrapper_SpotLight_ColorRatio_Calculator = 0x00142cb0;
 
 // hh_classes
 HH_Class_pMain_0x2 = 0x00212b10;
@@ -762,7 +782,6 @@ func_0016CB30 = 0x16CB30;
 func_00281120 = 0x281120;
 func_002A9870 = 0x2A9870;
 func_0012EA40 = 0x12EA40;
-func_0016D6B0 = 0x16D6B0;
 func_0016BEB0 = 0x16BEB0;
 func_0016BBF0 = 0x16BBF0;
 func_001AF0B0 = 0x1AF0B0;
@@ -999,7 +1018,7 @@ vwRenewalXZVelocityToTargetPos                                                  
 HH_Class_Blood_Stick_00                                                          = 0x2f4060;
 dicCode87                                                                        = 0x157c90;
 drop_shadow_add_micro2kick_packet                                                = 0x177c60;
-efCartridgeDischargeDrawPolyF4                                                   = 0x1eff30;
+// efCartridgeDischargeDrawPolyF4                                                   = 0x1eff30;
 vbApplyMatrixWithoutTr                                                           = 0x1b6f30;
 ///////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////// CODDOG /////////////////////////////////////////
