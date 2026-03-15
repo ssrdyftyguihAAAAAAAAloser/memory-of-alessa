@@ -74,15 +74,16 @@ static void clCheckHitDynamicWallCollision(CL_HITPOLY_COLUMN* col, s32* whnum) {
     for (i = 0; i < clDynamicWallList[ac].use; i++) {
         int j; // r17
         for (j = 0; clDynamicWallList[ac].dw[i][j].kind != 0; j++) {
-#ifdef DEBUG
             // check if column intersects dynamic wall
             clCheckColumn2WallHit(&cres, &clDynamicWallList[ac].dw[i][j], col);
-#endif
+
             if (cres.chk != 0) {
+#ifdef DEBUG
                 if (!(*whnum < 32)) {
                     printf("cl_main.c:1194> assert:(%s)\n", "*whnum < 32");
                     while (1) {};
                 }
+#endif
 
                 // store result in clWallHitData
                 clWallHitData[*whnum].kind = cres.chk;
