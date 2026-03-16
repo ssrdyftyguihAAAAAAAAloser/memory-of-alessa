@@ -299,7 +299,7 @@ int shCharacter_Manage_SetDataAdresss(SubCharacter* scp) {
         scp_d->models[2] = pMD;
         scp->function(scp);
         if (scp_d->anime_adr != 0) {
-            if (scp_d->sc.unk1C4 & 0x2000) {
+            if (scp_d->sc.unk1C0 & 0x2000) {
                 func_001DC700(&scp_d->sc, &scp_d->sc.rot, &scp_d->sc.pos);
                 func_001DCF10(&scp_d->sc);
             }
