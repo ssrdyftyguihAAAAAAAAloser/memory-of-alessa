@@ -212,7 +212,7 @@ int shCharacter_Manage_Init() {
 
 INCLUDE_ASM("asm/nonmatchings/Chacter/m3_sc", shCharacter_Manage_Create);
 
-int shCharacter_Manage_Delete(u16 kind, u16 id) { 
+int shCharacter_Manage_Delete(u_short kind, u_short id) { 
     SubCharacter * del_scp; // r16
     int delete_on = 0; // r7
 
@@ -290,10 +290,10 @@ int shCharacter_Manage_SetDataAdresss(SubCharacter* scp) {
 
     if (scp_d->model_adr == NULL) {
         func_00140D60(func_001DCAD0((s16) scp->kind));
-        SCSetModel(scp_d, (u64) pMD->sh_Model, (u64) pMD->pAnime);
-        scp_d->model_adr = (u64) pMD->sh_Model;
-        scp_d->anime_adr = (u64) pMD->pAnime;
-        scp_d->clani_adr = (u64) pMD->pCluster;
+        SCSetModel(scp_d, (u_long) pMD->sh_Model, (u_long) pMD->pAnime);
+        scp_d->model_adr = (u_long) pMD->sh_Model;
+        scp_d->anime_adr = (u_long) pMD->pAnime;
+        scp_d->clani_adr = (u_long) pMD->pCluster;
         scp_d->clani_adr = 0;
         (scp_d->anime).anime = (void*)((int)scp_d->anime_adr + 4);
         scp_d->models[2] = pMD;
@@ -305,8 +305,8 @@ int shCharacter_Manage_SetDataAdresss(SubCharacter* scp) {
             }
         }
     } else {
-        scp_d->model_adr = (u64) pMD->sh_Model;
-        scp_d->anime_adr = (u64) pMD->pAnime;
+        scp_d->model_adr = (u_long) pMD->sh_Model;
+        scp_d->anime_adr = (u_long) pMD->pAnime;
         scp_d->clani_adr = 0;
         (scp_d->anime).anime = (void*)((int)scp_d->anime_adr + 4);
         scp_d->models[0] = (void*) scp_d->model_adr;
