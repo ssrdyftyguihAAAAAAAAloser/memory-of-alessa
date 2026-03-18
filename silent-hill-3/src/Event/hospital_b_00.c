@@ -1,7 +1,5 @@
 #include "hospital_b_00.h"
 
-#define GET_FLAG(x, i) (((x[i >> 5]) >> (i & 0x1F)) & 1)
-
 int func_01F6D680_hospital_b_00(void) {
     int ret;
 
@@ -114,40 +112,40 @@ int func_01F6DA90_hospital_b_00(u_short* arg0) {
     switch (*arg0) {
         case 15:
             if ((birthday_handgun_bullets > D_01F706F0_hospital_b_00)) {
-                D_01F706F0_hospital_b_00 += 1;
+                D_01F706F0_hospital_b_00++;
                 ret = 1;
             }
             break;
         case 16:
             if (birthday_shotgun_shells > D_01F706E8_hospital_b_00) {
-                D_01F706E8_hospital_b_00 += 1;
+                D_01F706E8_hospital_b_00++;
                 ret = 1;
             }
             break;
     
         case 17:
             if (birthday_submachine_gun_bullets > D_01F706E0_hospital_b_00) {
-                D_01F706E0_hospital_b_00 += 1;
+                D_01F706E0_hospital_b_00++;
                 ret = 1;
             }
             break;
    
         case 18:
             if (birthday_health_drinks > D_01F706D8_hospital_b_00) {
-                D_01F706D8_hospital_b_00 += 1;
+                D_01F706D8_hospital_b_00++;
                 ret = 1;
             }
             break;
         case 19:
             if (birthday_first_aid_kits > D_01F706D0_hospital_b_00) {
-                D_01F706D0_hospital_b_00 += 1;
+                D_01F706D0_hospital_b_00++;
                 ret = 1;
             }
 
             break;
         case 20:
             if (birthday_ampoules > D_01F706C8_hospital_b_00) {
-                D_01F706C8_hospital_b_00 += 1;
+                D_01F706C8_hospital_b_00++;
                 ret = 1;
             }
             break;
@@ -331,13 +329,13 @@ int func_01F6E6C0_hospital_b_00(void) {
                 return 0;
             }
             SeCall(1.0f, 0.0f, 0x4A58);
-            D_01F70600_hospital_b_00 += 1;
+            D_01F70600_hospital_b_00++;
         case 1:
             if (D_01F70608_hospital_b_00 < 1.5f) {
                 return 0;
             }
             func_0016C1B0();
-            D_01F70600_hospital_b_00 += 1;
+            D_01F70600_hospital_b_00++;
             break;        
         default:
             ret = 1;
