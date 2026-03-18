@@ -30,7 +30,9 @@ typedef unsigned int u_long128;
 #define MIN(a,b) ((a) > (b) ? (b) : (a))
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 
-#define READ_UNCACHED(addr)      ((((u_int)(addr)) & 0x0fffffff) | 0x20000000)
+#define READ_UNCACHED(addr) ((((u_int)(addr)) & 0x0fffffff) | 0x20000000)
+
+#define GET_FLAG(x, i) (((x[i >> 5]) >> (i & 0x1F)) & 1)
 
 #define ABORT() asm("breakc 0")
 
