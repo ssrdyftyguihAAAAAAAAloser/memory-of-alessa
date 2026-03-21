@@ -103,7 +103,51 @@ int func_001538D0(char* arg0, int arg1, int arg2) {
     return temp_s0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00153930);
+
+int func_00153930(char* arg0, int arg1, int arg2){
+    int i;
+    func_001532C0_arg0_struct sp50;
+    int var_s2;
+    int ret;
+    int var_s3 = arg1 & 0x200000; 
+
+    arg1 &= ~0x200000;
+    i = 0;
+    
+    func_00152B50();
+    
+    for(;;){
+        var_s2 = func_001532C0(&sp50, arg0, sizeof(func_001532C0_arg0_struct), i);
+        if(var_s2 > 0){
+            ret = func_00151DF0(&sp50, arg1, arg2);
+
+            if(ret < 0){
+                i++;
+            }
+            else{
+                func_001533A0(arg0, ret);
+                break;
+            }
+        }
+        else{
+            printf(&D_00357930, &D_00357940, 0x214);
+            printf(&D_00357950, arg0, ret);
+            ret = -1;
+            break;
+        }
+
+    }
+
+    if(var_s3 != 0){
+        do{
+            printf(&D_00357970, &sp50);
+        }while(0);
+    }
+
+    func_00152B90();
+
+    return ret;
+}
 
 
 int func_00153A70(int arg0, int arg1, int arg2) {
@@ -148,14 +192,14 @@ int func_00153BA0(char* arg0, u_int arg1){
         arg1 = 0x4000;
     }
     else{
-        if((u32)arg0 & 0x3F){
+        if((u_int)arg0 & 0x3F){
             ret = 0;
         }
         if(arg1 & 0x7FF){
             ret = 0;
         } 
 
-        temp_s1 = (u32)arg0 & 0x3F;
+        temp_s1 = (u_int)arg0 & 0x3F;
         
         arg1 -= temp_s1;
         arg0 += temp_s1;
@@ -416,7 +460,62 @@ int func_00154950(int arg0, int arg1, int arg2){
     return ret;
 }
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_001549B0);
+
+int func_001549B0(int arg0, func_001532C0_arg0_struct* arg1, int arg2){
+    int ret;
+    int var_s2;
+    char** var_s4;
+    char** var_s5;
+    int i = 0;
+    int sp70[24];
+    int* temp;
+    
+    if(arg1 != 0 && arg2 > 0){
+        func_00152B50();
+
+        for(;;){
+            var_s2 = func_001532C0(arg1, arg0, arg2, i);
+            if(var_s2 > 0){
+                temp = sp70;
+                
+                ret = func_001523C0(arg1, temp);
+
+                if(ret < 0){
+                    i++;
+                }
+                else{
+                    ret = func_00130EA0(arg1);
+                    break;
+                }
+            }
+            else{
+                ret = -1;
+                break;
+            }
+        }
+        
+        func_00152B90();
+    }
+    else{
+        if(arg2 > 0){
+            var_s4 = &D_003579C8;
+        }
+        else{
+            var_s4 = &D_003579D0;
+        }
+        if(arg1 != 0){
+            var_s5 = &D_003579C8;
+        }
+        else{
+            var_s5 = &D_003579E0;
+        }
+
+        printf(&D_003579F8, var_s5, var_s4);
+        ret = -1;
+    }
+
+    return ret;
+}
 
 int func_00154B10(int* arg0) {
     int ret;
@@ -445,8 +544,12 @@ int func_00154C90(int arg0, int arg1, int arg2) {
     func_00154DB0(arg0, arg1, arg2);
 }
 
-
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154CD0);
+void func_00154CD0(int arg0, int arg1, int arg2){
+    int sp0 = arg2;
+    
+    func_00172E90(sp0);
+    ExitHandler();
+}
 
 int func_00154D10(u_short arg0) {
     int temp_v0;
@@ -467,6 +570,14 @@ int func_00154D10(u_short arg0) {
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", func_00154DB0);
 
-INCLUDE_ASM("asm/nonmatchings/fsserve", func_00155080);
+int func_00155080(int arg0){
+    int ret;
+
+    func_00152C20();
+    ret = LoadAr(arg0);
+    func_00152C60();
+
+    return ret;
+}
 
 INCLUDE_ASM("asm/nonmatchings/fsserve", LoadAr);
