@@ -21,8 +21,8 @@ typedef struct func_001532C0_arg0_struct{
     char unk0[0x200];
 }func_001532C0_arg0_struct;
 
-void func_00154CD0(int arg2);
-int func_00172EF0(u_short, void (*)(int), int);
+void func_00154CD0(int arg0, int arg1, int arg2);
+int func_00172EF0(u_short, void*, int);
 
 int func_001533A0(char* arg0, int arg1);
 int func_00153530(int arg0, int arg1, int arg2);
@@ -74,5 +74,9 @@ extern int D_00357970; // "%s"
 extern char* D_00357988; // "Stat   : "
 extern char* D_00357998; // "Load   : "
 extern char* D_003579B0; // "can't find file: %s"
+extern char* D_003579C8; // ""
+extern char* D_003579D0; // "limitLen<=0"
+extern char* D_003579E0; // "(realpath==NULL)"
+extern char* D_003579F8; // "failed. %s%s"
 
 #endif
