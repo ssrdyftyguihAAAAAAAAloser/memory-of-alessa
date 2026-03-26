@@ -4,7 +4,7 @@ INCLUDE_ASM("asm/nonmatchings/movie/pss_vibuf", getFIFOindex);
 
 INCLUDE_ASM("asm/nonmatchings/movie/pss_vibuf", setD3_CHCR);
 
-INCLUDE_ASM("asm/nonmatchings/movie/pss_vibuf", setD4_CHCR_0x0028C550);
+INCLUDE_ASM("asm/nonmatchings/movie/pss_vibuf", setD4_CHCR);
 
 INCLUDE_ASM("asm/nonmatchings/movie/pss_vibuf", scTag2);
 
