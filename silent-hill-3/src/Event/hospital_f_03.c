@@ -1,5 +1,7 @@
 #include "hospital_f_03.h"
 
+UNCURSE_HOSPITAL_MOON();
+
 int func_01F6D680_hospital_f_03(void) {
     int ret;
 

@@ -37,4 +37,16 @@ extern u_int D_1D316F4;
 extern u_int D_1D31724;
 extern u_int D_1D318E4;
 
+// @hack thanks SeCall :')
+/* begin candles, holy rituals to bend SeCall to our will */
+#define UNCURSE_HOSPITAL_MOON()                           \
+float moon_candle_hospital(float x, float y) {            \
+    float charm;                                          \
+    float gem;                                            \
+    charm *= x;                                           \
+    gem *= y;                                             \
+    return charm * charm + gem + gem;                     \
+}
+/* end candles */
+
 #endif
