@@ -1,5 +1,7 @@
 #include "hh_class_manager.h"
 
+#pragma divbyzerocheck off
+
 static u_int ImpactManager(Object_Group_Infomeation* pInfo);
 static u_int InstanceManager(Object_Group_Infomeation* pInfo);
 static u_int InstanceCreateSuppressEnvironment_Initialize(Object_Group_Infomeation* pInfo);
@@ -50,7 +52,7 @@ static u_int ImpactManager(Object_Group_Infomeation* pInfo) {
                 free_instance_check = FreeInstance_Stack_FreeCheck(pInstance_Info);
                 free_data_block_check = FreeDataBlock_Stack_FreeCheck(&pInfo->Association_Info.pDataPool_Info[element.Class_Descriptor]);
 
-                if(free_instance_check == 0 || free_data_block_check == 1){
+                if(free_instance_check == 0 || free_data_block_check == 0){
                     Exception_Handling_Instance_Create(pInfo, 1, element.Class_Descriptor);
                 }
                 if(Instance_Create(pInfo, &element) != 0){
