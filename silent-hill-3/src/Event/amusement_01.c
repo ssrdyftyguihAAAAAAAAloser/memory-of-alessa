@@ -959,4 +959,225 @@ void func_01F709D0_amusement_01(void) {
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/Event/amusement_01", func_01F70A90_amusement_01);
+
+void func_01F70A90_amusement_01(void) {
+    sceVu0FMATRIX sp10;
+    sceVu0FMATRIX sp50;
+    sceVu0FMATRIX* sp90;
+    sceVu0FVECTOR spA0;
+    sceVu0FMATRIX spB0;
+    float angle;
+    float t;
+    u_int flags;
+    u_int flag_d;
+    short room_name;
+
+    if (D_01F74CF8_amusement_01 == 0) {
+        func_01F709D0_amusement_01();
+    }
+    room_name = RoomName();
+    switch (room_name) {
+        case 0xD8:
+            if (func_00190950() == 1) {
+                clAddDynamicWall(&D_01F73D40_amusement_01);
+                clAddDynamicWall(&D_01F73C50_amusement_01);
+                clAddDynamicWall(&D_01F73E80_amusement_01);
+                clAddDynamicWall(&D_01F73B60_amusement_01);
+                clAddDynamicWall(&D_01F73480_amusement_01);
+                clAddDynamicWall(&D_01F738E0_amusement_01);
+                clAddDynamicWall(&D_01F735C0_amusement_01);
+                clAddDynamicWall(&D_01F737A0_amusement_01);
+                break;
+            }
+            break;
+
+        case 0xDA:
+            if (!(GET_BIT(D_1D31648, 2)) && (func_01F6D7C0_amusement_01())) {
+                D_1D31648 |= 4;
+                break;
+            }
+            break;
+
+        case BORLEY_HAUNTED_MANSION_DINING_ROOM:
+            if (!(GET_BIT(D_1D31648, 3))) {
+                if (func_01F6D840_amusement_01()) {
+                    D_1D31648 |= 8;
+                    break;
+                }
+            }
+            break;
+
+        case BORLEY_HAUNTED_MANSION_DANNY_ROOM:
+            if (!(GET_BIT(D_1D31648, 4)) && func_01F6DF10_amusement_01()) {
+                D_1D31648 |= 0x10;
+            }
+            if (GET_BIT(D_1D3169C, 0x18)) {
+                clAddDynamicWall(&D_01F72DA0_amusement_01);
+            }
+            if (!(D_01F74DB0_amusement_01 <= -(0.5f * shGetDT())) && (D_01F74DB0_amusement_01 < (0.5f * shGetDT()))) {
+                func_001C2B80(2, &sp10);
+                func_0015DCD0(1.0f, 10000.0f, 0x3BC9, &sp10[3], 0, 0);
+            }
+            t = D_01F74DB0_amusement_01 + shGetDT();
+            D_01F74DB0_amusement_01 = t;
+            angle = shAngleRegulate(t);
+            D_01F74DB0_amusement_01 = angle;
+            func_001C2A70(2, TO_RAD(1.5f * shSinF(angle)));
+            break;
+    
+        case BORLEY_HAUNTED_MANSION_SPIKE_ROOM: {
+            u_int flags_0;
+            u_int flags_1;
+
+            flags_0 = D_1D3169C;
+            if (GET_BIT(flags_0, 0x19)) {
+                if (!GET_BIT(D_1D31648, 6)) {
+                    func_01F6E2A0_amusement_01();
+                    break;
+                }
+                break;
+            }
+
+            flags_1 = D_1D31648;
+            if (!GET_BIT(flags_1, 5)) {
+                if (func_01F6E1A0_amusement_01()) {
+                    D_1D31648 |= 0x20;
+                    break;
+                }
+                break;
+            }
+
+            if (GET_BIT(flags_0, 0x1A) && !GET_BIT(flags_1, 7) && func_01F6E710_amusement_01()) {
+                D_1D31648 |= 0x80;
+                break;
+            }
+
+            break;
+        } 
+        case BORLEY_HAUNTED_MANSION_MAZE_1_ROOM:
+            if (!GET_BIT(D_1D31648, 8) && (func_01F6E790_amusement_01())) {
+                D_1D31648 |= 0x100;
+            }
+            if (!GET_BIT(D_1D3169C, 0x1C) && func_01F6E810_amusement_01()) {
+                D_1D3169C |= 0x10000000;
+            }
+            if (GET_BIT(D_1D316A0, 4)) {
+                func_01F6E9A0_amusement_01();
+                break;
+            }
+            break;
+
+        case BORLEY_HAUNTED_MANSION_MAZE_2_ROOM:
+            if (GET_BIT(D_1D316A0, 4)) {
+                func_01F6E9A0_amusement_01();
+                break;
+            }
+            break;
+
+        case 0xE0:
+            if (!GET_BIT(D_1D31648, 0x1A)) {
+                func_001C2B80(4, &sp50);
+                sp50[3][1] += 2000.0f;
+                func_001C2A80(4, &sp50);
+            }
+            if (func_00190950() == 1) {
+                clAddDynamicWall(&D_01F73F20_amusement_01);
+            }
+            if (GET_BIT(D_1D31648, 0x1A)) {
+                clAddDynamicWall(&D_01F741A0_amusement_01);
+            }
+            if (func_001643D0() != 0x3D) {
+                if (GET_BIT(D_1D31648, 0x1A)) {
+                    func_0016CA40(4);
+                } else {
+                    flags = D_1D3169C;
+                    flag_d = GET_BIT(flags, 0xD);
+                    if ((flag_d) && (GET_BIT(flags, 0xE))) {
+                        func_0016CA40(2);
+                    } else if (flag_d) {
+                        func_0016CA40(3);
+                    } else if (GET_BIT(flags, 0xE)) {
+                        func_0016CA40(1);
+                    }
+                }
+                if (GET_BIT(D_1D31648, 0x1A)) {
+                    func_001C2A60(1, 0.0f);
+                    func_001C2A60(2, 0.0f);
+                    func_001C2A60(3, 0.0f);
+                    func_001C2A60(4, 0.0f);
+                    func_001C2A60(5, TO_RAD(25));
+                    sceVu0UnitMatrix(&spB0);
+                    shRotMatrixX(&spB0, &spB0, QUARTER_TURN);
+                    shRotMatrixY(&spB0, &spB0, TO_RAD(119));
+                    func_0016CBD0(&sp90, &spA0, 0xE);
+                    mat_copy(sp10, sp90);
+                    sp10[3][1] -= 540.0f;
+                    sp10[3][0] -= 35.0f;
+                    shMulMatrix(&sp10, &sp10, &spB0);
+                    func_001C2A80(6, &sp10);
+                }
+                if (!(GET_BIT(D_1D3169C, 0x10))) {
+                    func_0016CA40(5);
+                    clAddDynamicWall(&D_01F74010_amusement_01);
+                    break;
+                }
+                func_0016CA40(0xF);
+                break;
+            }
+            break;
+
+        case 0xE1:
+            if (func_00190950() == 1) {
+                clAddDynamicWall(&D_01F74290_amusement_01);
+                break;
+            }
+            break;
+
+        case 0xE2:
+            if (!(GET_BIT(D_1D3169C, 0xF))) {
+                func_0016CA40(0xB);
+            }
+            if (!(GET_BIT(D_1D3169C, 0x10))) {
+                func_0016CA40(0xA);
+                break;
+            }
+            break;
+
+        case 0xE3:
+            if (GET_BIT(D_1D31648, 0x1E)) {
+                func_01F70390_amusement_01();
+            }
+            if (func_00190950() == 1) {
+                clAddDynamicWall(&D_01F72F30_amusement_01);
+                clAddDynamicWall(&D_01F72FD0_amusement_01);
+                clAddDynamicWall(&D_01F73070_amusement_01);
+                clAddDynamicWall(&D_01F73160_amusement_01);
+                clAddDynamicWall(&D_01F73250_amusement_01);
+            }
+            clAddDynamicWall(&D_01F73340_amusement_01);
+            break;
+
+        case 0xE5:
+            if (!(GET_BIT(D_1D3169C, 0x11))) {
+                func_0016CA40(8);
+            }
+            if (!(GET_BIT(D_1D3169C, 0x12))) {
+                func_0016CA40(9);
+                break;
+            }
+            break;
+
+        case 0xE6:
+            if (GET_BIT(D_1D3169C, 0x14)) {
+                func_0016CA40(6);
+            }
+            if (GET_BIT(D_1D3169C, 0x15)) {
+                func_0016CA40(7);
+            }
+            break;
+
+        case 0xE4:
+        case 0xE7:
+            break;
+    }
+}

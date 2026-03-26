@@ -89,7 +89,6 @@ extern int func_0016BED0(int, int);
 extern int GetRiddleLevel(void);
 extern int func_001C2580(int);
 
-extern void fontClear(void);
 extern int func_0015DFC0(int, int);
 extern void func_001BE4B0(int);
 extern void func_001C2A80(int, sceVu0FMATRIX*);
@@ -99,6 +98,11 @@ extern void func_001C2B80(int, float*);
 extern void func_001E0130(float*, float*, float*, int);
 extern int func_01F6E220_amusement_01(void);
 extern int func_01F70750_amusement_01(void);
+
+extern void shRotMatrixY(float (* m0)[4] /* r2 */, float (* m1)[4] /* r2 */, float);
+extern void shRotMatrixX(float (* m0)[4] /* r2 */, float (* m1)[4] /* r2 */, float);
+extern void shMulMatrix(float (* m0)[4] /* r2 */, float (* m1)[4] /* r2 */, float (* m2)[4] /* r2 */);
+
 
 extern int D_01F74D00_amusement_01;
 extern sceVu0FVECTOR D_01F74670_amusement_01;
@@ -134,8 +138,9 @@ extern float D_01F74AF0_amusement_01;
 extern int D_01F74D08_amusement_01;
 extern DWORD D_01F74A70_amusement_01;
 extern DWORD *D_01F74D10_amusement_01;
-extern int D_1D316A0;
-extern int D_1D316AC;
+
+extern u_int D_1D316A0;
+extern u_int D_1D316AC;
 extern u_int D_1D31648;
 
 extern float D_01F74590_amusement_01;
@@ -158,5 +163,25 @@ extern float D_01F74DC0_amusement_01;
 extern __int128 D_01F748C0_amusement_01;
 extern sceVu0FVECTOR D_01F748D0_amusement_01;
 extern sceVu0FVECTOR D_01F748E0_amusement_01;
+
+extern int D_01F72DA0_amusement_01;
+extern int D_01F72F30_amusement_01;
+extern int D_01F72FD0_amusement_01;
+extern int D_01F73070_amusement_01;
+extern int D_01F73160_amusement_01;
+extern int D_01F73250_amusement_01;
+extern int D_01F73340_amusement_01;
+extern int D_01F73480_amusement_01;
+extern int D_01F735C0_amusement_01;
+extern int D_01F737A0_amusement_01;
+extern int D_01F738E0_amusement_01;
+extern int D_01F73B60_amusement_01;
+extern int D_01F73C50_amusement_01;
+extern int D_01F73D40_amusement_01;
+extern int D_01F73E80_amusement_01;
+extern int D_01F73F20_amusement_01;
+extern int D_01F74010_amusement_01;
+extern int D_01F741A0_amusement_01;
+extern int D_01F74290_amusement_01;
 
 #endif
