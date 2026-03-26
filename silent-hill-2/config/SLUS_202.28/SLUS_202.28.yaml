@@ -267,7 +267,7 @@ segments:
       - [0x157f40, asm, Effect2/hh_class_dust_00]
       - [0x158790, asm, Effect2/hh_class_glass_break_phenomenon_00]
       - [0x159110, asm, Effect2/hh_class_glass_piece_00]
-      - [0x159ce0, asm, Effect2/hh_class_manager]
+      - [0x159ce0, c, Effect2/hh_class_manager]
       - [0x15ad80, asm, Effect2/hh_class_object_execute]
       - [0x15b560, asm, Effect2/hh_class_plural_phenomenon_00]
       - [0x15b930, asm, Effect2/hh_class_raise_dust_phenomenon_00]
@@ -367,5 +367,7 @@ segments:
       - [0x2918e0, rodata,  rodata_3]
       - [0x291ac0, .rodata, Font/font]
       - [0x291c00, rodata,  rodata_4]
+      - [0x29A870, .rodata, hh_class_manager]
+      - [0x29A8A0, rodata, rodata_5]
       - { vram: 0x3c7d80, type: bss, name: bss }
   - [0x2c8480]
