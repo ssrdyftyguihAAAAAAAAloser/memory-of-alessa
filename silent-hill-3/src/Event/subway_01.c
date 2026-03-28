@@ -55,6 +55,11 @@ void func_01F6E270_subway_01(void)
     }
 }
 
+
+INCLUDE_ASM("asm/nonmatchings/Event/subway_01", func_01F6E2D0_subway_01);
+
+INCLUDE_ASM("asm/nonmatchings/Event/subway_01", func_01F6E320_subway_01);
+
 INCLUDE_ASM("asm/nonmatchings/Event/subway_01", func_01F6E380_subway_01);
 
 INCLUDE_ASM("asm/nonmatchings/Event/subway_01", func_01F6E7C0_subway_01);
