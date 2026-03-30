@@ -395,3 +395,73 @@ static u_int EntryRecord_Handle_Search(u_int Handle /* r2 */) {
     }
     return result;
 }
+
+static void Sequence_Different_Time_Set(float Time /* r29 */) {
+    pMUD->Different_Time = Time;
+}
+
+static float Sequence_Different_Time_Get(void) {
+    return pMUD->Different_Time;
+}
+
+static u_int EventMessageQueue_Length_Get(void) {
+    return 0x64; // 100
+}
+
+static u_int EventMessageQueue_deQueue(DSR_MU_EventDescriptor *pDescriptor) {
+    u_int result;
+    u_int length;
+
+    result = 0;
+    length = EventMessageQueue_Length_Get();
+    if (pMUD->EventQueue_Count != 0) {
+        *pDescriptor = _EventQueue[pMUD->deQueue_Pos++];
+        pMUD->deQueue_Pos = pMUD->deQueue_Pos % length;
+        pMUD->EventQueue_Count = pMUD->EventQueue_Count - 1;
+        result = 1;
+    }
+    return result;
+}
+
+static u_int EntryRecord_Handle_Get(EntryRecord * pER /* r2 */) {
+    return pER->Handle;
+}
+
+static u_int EntryRecord_Enable_Check(EntryRecord * pER /* r2 */) {
+    return pER->Enable;
+}
+
+static u_int EntryRecord_TimeOver_Check(EntryRecord * pER /* r2 */) {
+
+    u_int result; // r2
+
+    result = 0;
+    if (!(pER->Time_Count <= pER->Time_Max)) {
+        result = 1;
+    }
+    return result;
+}
+
+static u_int EntryRecord_Type_Get(EntryRecord * pER /* r2 */)  {
+    return pER->Info.pObject->Type;
+}
+
+static u_int EntryRecord_Condition_Get(EntryRecord * pER /* r2 */) {
+    return pER->Condition;
+}
+
+static void EntryRecord_Condition_Set(EntryRecord * pER /* r2 */, u_int Condition /* r2 */) {
+    pER->Condition = Condition;
+}
+
+static void EntryRecordTable_All_Initialize(void) {
+    
+    u_int i; // r16
+
+    i = 0;
+
+    while (i < 0x14) {
+        EntryRecord_Initialize(EntryRecord_Get_fromTableIndex(i));
+        i++;
+    }
+}
