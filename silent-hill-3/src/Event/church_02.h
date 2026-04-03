@@ -37,6 +37,8 @@ extern float D_01F769C0_church_02;
 extern float D_01F76A20_church_02;
 extern float D_01F76A40_church_02;
 extern float D_01F76AA0_church_02;
+extern float D_01F76E10_church_02;
+extern float D_01F76E70_church_02;
 extern int D_01F76AC0_church_02;
 extern int D_01F76AD0_church_02;
 extern int D_01F77580_church_02;
