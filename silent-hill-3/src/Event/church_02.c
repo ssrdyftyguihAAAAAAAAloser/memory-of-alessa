@@ -232,9 +232,32 @@ INCLUDE_ASM("asm/nonmatchings/Event/church_02", func_01F6EFA0_church_02);
 
 INCLUDE_ASM("asm/nonmatchings/Event/church_02", func_01F6F1F0_church_02);
 
-INCLUDE_ASM("asm/nonmatchings/Event/church_02", func_01F6F810_church_02);
+int func_01F6F810_church_02(void) {
+    return 1;
+}
 
-INCLUDE_ASM("asm/nonmatchings/Event/church_02", func_01F6F820_church_02);
+int func_01F6F820_church_02(void) {
+    int ret = 0;
+
+    switch (D_01F77580_church_02) {
+    case 0:
+        func_001C2290(3, 0.5f);
+        func_00190A20(2);
+        D_01F77580_church_02++;
+        /* fallthrough */
+    case 1:
+        ret = func_0016C540(&D_01F76E10_church_02, &D_01F76E70_church_02);
+        break;
+    }
+    if (ret != 0) {
+        D_01F77580_church_02 = 0;
+        D_1D316AC[0] |= 0x20000000;
+        func_00190A20(0);
+        func_001C2290(2, 0.0f);
+    }
+    return ret;
+}
+
 
 INCLUDE_ASM("asm/nonmatchings/Event/church_02", func_01F6F8E0_church_02);
 
