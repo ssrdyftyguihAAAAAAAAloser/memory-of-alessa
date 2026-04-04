@@ -86,7 +86,7 @@ sh3gfw_UnLock_AllTexSlot_For_Shadow = 0x001b5d40;
 sh3gfw_SetSlot2Tex = 0x001b5db0;
 
 // cl_main
-rodata_jyun = 0x00361bc0; // type:int[5] size:0x14
+rodata_jyun = 0x00361bc0; // size:0x14
 
 // vb_main
 vbCalcViewScreenMatrix = 0x001b64a0;
