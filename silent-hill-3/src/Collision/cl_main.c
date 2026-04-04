@@ -102,7 +102,53 @@ INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", Line2PlaneBoundaryCheckXZ);
 
 INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", func_001A5690);
 
-INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", clCheckCrossLine2LineXZ);
+int clCheckCrossLine2LineXZ(float * va0, float * va1, float * vb0, float * vb1) {
+    float bp[4]; // r29
+    float p0[4]; // r29+0x10
+    float p1[4]; // r29+0x20
+    float outer0; // r4
+    float outer1; // r1
+    vec_sub(va1, va0, bp);
+    vec_sub(vb0, va0, p0);
+    vec_sub(vb1, va0, p1);
+    outer0 = bp[0] * p0[2] - bp[2] * p0[0];
+    outer1 = bp[0] * p1[2] - bp[2] * p1[0];
+    if (outer0 == 0.0f && outer1 == 0.0f) {
+        if ((va0[0] <= float_max(vb0[0], vb1[0])  &&
+             va0[0] >= float_min(vb0[0], vb1[0])  &&
+             va0[2] <= float_max(vb0[2], vb1[2])  &&
+             va0[2] >= float_min(vb0[2], vb1[2])) ||
+            (va1[0] <= float_max(vb0[0], vb1[0])  &&
+             va1[0] >= float_min(vb0[0], vb1[0])  &&
+             va1[2] <= float_max(vb0[2], vb1[2])  &&
+             va1[2] >= float_min(vb0[2], vb1[2])) ||
+            (vb0[0] <= float_max(va0[0], va1[0])  &&
+             vb0[0] >= float_min(va0[0], va1[0])  &&
+             vb0[2] <= float_max(va0[2], va1[2])  &&
+             vb0[2] >= float_min(va0[2], va1[2])) ||
+            (vb1[0] <= float_max(va0[0], va1[0])  &&
+             vb1[0] >= float_min(va0[0], va1[0])  &&
+             vb1[2] <= float_max(va0[2], va1[2])  &&
+             vb1[2] >= float_min(va0[2], va1[2]))
+        ) {
+            return 1;
+        }
+        return 0;
+    }
+
+    if (outer0 * outer1 >= 0.0f) {
+        return 0;
+    }
+    vec_sub(vb1, vb0, bp);
+    vec_sub(va0, vb0, p0);
+    vec_sub(va1, vb0, p1);
+    outer0 = bp[0] * p0[2] - bp[2] * p0[0];
+    outer1 = bp[0] * p1[2] - bp[2] * p1[0];
+    if (outer0 * outer1 >= 0.0f) {
+        return 0;
+    }
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/Collision/cl_main", func_001A5B60);
 
