@@ -1,0 +1,4 @@
+#ifndef FOG_SPKTEXMAN_H
+#define FOG_SPKTEXMAN_H
+
+#endif // FOG_SPKTEXMAN_H

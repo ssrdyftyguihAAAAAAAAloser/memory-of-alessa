@@ -1,0 +1,4 @@
+#ifndef SOUND_SND_SELECT_H
+#define SOUND_SND_SELECT_H
+
+#endif // SOUND_SND_SELECT_H

@@ -1,0 +1,4 @@
+#ifndef GFW_SH2GFW_GSCTL_MAN_H
+#define GFW_SH2GFW_GSCTL_MAN_H
+
+#endif // GFW_SH2GFW_GSCTL_MAN_H

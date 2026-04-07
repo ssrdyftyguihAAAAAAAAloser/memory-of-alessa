@@ -1,0 +1,4 @@
+#ifndef SHGS_SH2GFW_GSINIT_H
+#define SHGS_SH2GFW_GSINIT_H
+
+#endif // SHGS_SH2GFW_GSINIT_H

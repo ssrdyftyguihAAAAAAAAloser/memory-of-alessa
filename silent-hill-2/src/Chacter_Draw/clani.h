@@ -1,0 +1,4 @@
+#ifndef CHACTER_DRAW_CLANI_H
+#define CHACTER_DRAW_CLANI_H
+
+#endif // CHACTER_DRAW_CLANI_H

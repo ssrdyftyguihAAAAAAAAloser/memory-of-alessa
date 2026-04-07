@@ -1,0 +1,4 @@
+#ifndef EFFECT_EF_MALLOC_H
+#define EFFECT_EF_MALLOC_H
+
+#endif // EFFECT_EF_MALLOC_H

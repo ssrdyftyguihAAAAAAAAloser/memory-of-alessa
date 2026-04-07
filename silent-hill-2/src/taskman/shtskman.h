@@ -1,0 +1,4 @@
+#ifndef TASKMAN_SHTSKMAN_H
+#define TASKMAN_SHTSKMAN_H
+
+#endif // TASKMAN_SHTSKMAN_H

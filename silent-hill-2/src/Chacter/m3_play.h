@@ -1,0 +1,4 @@
+#ifndef CHACTER_M3_PLAY_H
+#define CHACTER_M3_PLAY_H
+
+#endif // CHACTER_M3_PLAY_H

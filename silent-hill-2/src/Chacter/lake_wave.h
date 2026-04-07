@@ -1,0 +1,4 @@
+#ifndef CHACTER_LAKE_WAVE_H
+#define CHACTER_LAKE_WAVE_H
+
+#endif // CHACTER_LAKE_WAVE_H

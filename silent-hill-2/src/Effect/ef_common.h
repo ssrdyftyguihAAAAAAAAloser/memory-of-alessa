@@ -1,0 +1,4 @@
+#ifndef EFFECT_EF_COMMON_H
+#define EFFECT_EF_COMMON_H
+
+#endif // EFFECT_EF_COMMON_H

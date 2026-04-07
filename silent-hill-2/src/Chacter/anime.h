@@ -1,0 +1,4 @@
+#ifndef CHACTER_ANIME_H
+#define CHACTER_ANIME_H
+
+#endif // CHACTER_ANIME_H

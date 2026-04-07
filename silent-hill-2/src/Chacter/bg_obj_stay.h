@@ -1,0 +1,4 @@
+#ifndef CHACTER_BG_OBJ_STAY_H
+#define CHACTER_BG_OBJ_STAY_H
+
+#endif // CHACTER_BG_OBJ_STAY_H

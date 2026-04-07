@@ -1,0 +1,4 @@
+#ifndef LOADBG_LOADBG_MEM_H
+#define LOADBG_LOADBG_MEM_H
+
+#endif // LOADBG_LOADBG_MEM_H

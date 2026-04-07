@@ -1,0 +1,4 @@
+#ifndef CHACTER_DRAW_SH_KT_VU0_H
+#define CHACTER_DRAW_SH_KT_VU0_H
+
+#endif // CHACTER_DRAW_SH_KT_VU0_H

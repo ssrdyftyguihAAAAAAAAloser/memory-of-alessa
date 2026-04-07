@@ -1,0 +1,4 @@
+#ifndef LENS_LENS_FLARE_H
+#define LENS_LENS_FLARE_H
+
+#endif // LENS_LENS_FLARE_H

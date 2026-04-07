@@ -1,0 +1,4 @@
+#ifndef LOADBG_LOADBG_CAM_H
+#define LOADBG_LOADBG_CAM_H
+
+#endif // LOADBG_LOADBG_CAM_H

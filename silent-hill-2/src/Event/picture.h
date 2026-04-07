@@ -1,0 +1,4 @@
+#ifndef EVENT_PICTURE_H
+#define EVENT_PICTURE_H
+
+#endif // EVENT_PICTURE_H

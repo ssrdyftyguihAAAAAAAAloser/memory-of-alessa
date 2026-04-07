@@ -1,0 +1,4 @@
+#ifndef MULTI_THR_INTC_SYNCV_H
+#define MULTI_THR_INTC_SYNCV_H
+
+#endif // MULTI_THR_INTC_SYNCV_H

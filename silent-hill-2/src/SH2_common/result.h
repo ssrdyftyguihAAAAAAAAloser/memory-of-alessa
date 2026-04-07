@@ -1,0 +1,4 @@
+#ifndef SH2_COMMON_RESULT_H
+#define SH2_COMMON_RESULT_H
+
+#endif // SH2_COMMON_RESULT_H

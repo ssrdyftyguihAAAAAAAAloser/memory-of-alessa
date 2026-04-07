@@ -1,0 +1,4 @@
+#ifndef MOVIE_PSS_VIBUF_H
+#define MOVIE_PSS_VIBUF_H
+
+#endif // MOVIE_PSS_VIBUF_H

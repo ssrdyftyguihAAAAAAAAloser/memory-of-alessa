@@ -1,0 +1,4 @@
+#ifndef EFFECT_EF_SPARKS_H
+#define EFFECT_EF_SPARKS_H
+
+#endif // EFFECT_EF_SPARKS_H

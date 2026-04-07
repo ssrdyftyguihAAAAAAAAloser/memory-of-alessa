@@ -1,0 +1,4 @@
+#ifndef EFFECT_EF_SMOKE_H
+#define EFFECT_EF_SMOKE_H
+
+#endif // EFFECT_EF_SMOKE_H

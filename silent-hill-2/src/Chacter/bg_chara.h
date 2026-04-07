@@ -1,0 +1,4 @@
+#ifndef CHACTER_BG_CHARA_H
+#define CHACTER_BG_CHARA_H
+
+#endif // CHACTER_BG_CHARA_H

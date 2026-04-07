@@ -1,0 +1,4 @@
+#ifndef GFW_GFW_TEST_CAMERA_H
+#define GFW_GFW_TEST_CAMERA_H
+
+#endif // GFW_GFW_TEST_CAMERA_H

@@ -1,0 +1,4 @@
+#ifndef SH2_COMMON_SH_VU0_H
+#define SH2_COMMON_SH_VU0_H
+
+#endif // SH2_COMMON_SH_VU0_H

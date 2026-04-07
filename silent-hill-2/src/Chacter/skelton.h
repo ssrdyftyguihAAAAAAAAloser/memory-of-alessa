@@ -1,0 +1,4 @@
+#ifndef CHACTER_SKELTON_H
+#define CHACTER_SKELTON_H
+
+#endif // CHACTER_SKELTON_H

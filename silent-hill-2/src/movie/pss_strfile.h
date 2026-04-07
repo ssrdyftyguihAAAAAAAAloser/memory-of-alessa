@@ -1,0 +1,4 @@
+#ifndef MOVIE_PSS_STRFILE_H
+#define MOVIE_PSS_STRFILE_H
+
+#endif // MOVIE_PSS_STRFILE_H
