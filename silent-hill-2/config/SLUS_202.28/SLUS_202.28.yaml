@@ -240,7 +240,7 @@ segments:
       - [0x13b3b0, asm, MC/mc]
       - [0x143370, asm, MC/mc_menu]
       - [0x1480d0, asm, MC/savedata]
-      - [0x148790, asm, Event/stage/stg_tgs_trial]
+      - [0x148790, c,   Event/stage/stg_tgs_trial]
       - [0x14c2b0, asm, Chacter/m3_rpjames]
       - [0x14ca60, asm, Chacter/m3_rwep]
       - [0x151530, asm, GFW/sh2_DrawEnvData]
@@ -373,10 +373,12 @@ segments:
       - [0x292d80, rodata,  rodata_6]
       - [0x2988d0, .rodata, Event/stg_overlay]
       - [0x298ac8, rodata,  rodata_7]
+      - [0x29a230, .rodata, Event/stage/stg_tgs_trial]
+      - [0x29a280, rodata,  rodata_8]
       - [0x29a870, .rodata, Effect2/hh_class_manager]
-      - [0x29a8a0, rodata,  rodata_8]
+      - [0x29a8a0, rodata,  rodata_9]
       - [0x29cb00, .rodata, Effect2/hh_memory_manage]
-      - [0x29cb80, rodata,  rodata_9]
+      - [0x29cb80, rodata,  rodata_A]
       - { vram: 0x03c7d80, type: bss,  name: bss_0 }
       - { vram: 0x041bf10, type: .bss, name: Chacter_Draw/model_common }
       - { vram: 0x0438588, type: bss,  name: bss_1 }

@@ -254,7 +254,6 @@ typedef struct SubCharacterDisp
     void *clani_list;                     // offset 0x338, size 0x4
 } SubCharacterDisp;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\chara_saveinfo.c
 typedef struct shCharacterAll
 {
     // total size: 0x6810
@@ -265,7 +264,6 @@ typedef struct shCharacterAll
     char total;                       // offset 0x680C, size 0x1
 } shCharacterAll;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnPATH_DATA
 {
     // total size: 0x10
@@ -277,7 +275,6 @@ typedef struct EnPATH_DATA
     short timer;     // offset 0xE, size 0x2
 } EnPATH_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnAMBUSH_DATA
 {
     // total size: 0x1C
@@ -290,7 +287,6 @@ typedef struct EnAMBUSH_DATA
     float dir;      // offset 0x18, size 0x4
 } EnAMBUSH_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnSCU_DATA
 {
     // total size: 0x30
@@ -302,7 +298,6 @@ typedef struct EnSCU_DATA
     s_char dcm;                   // offset 0x29, size 0x1
 } EnSCU_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnMKN_DATA
 {
     // total size: 0x30
@@ -315,7 +310,6 @@ typedef struct EnMKN_DATA
     s_char dcm;      // offset 0x2B, size 0x1
 } EnMKN_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnCOMMUNICATION
 {
     // total size: 0x20
@@ -326,7 +320,6 @@ typedef struct EnCOMMUNICATION
     float dist;   // offset 0x1C, size 0x4
 } EnCOMMUNICATION;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnTYU_DATA
 {
     // total size: 0x20
@@ -338,7 +331,6 @@ typedef struct EnTYU_DATA
     s_char moves;                  // offset 0x1E, size 0x1
 } EnTYU_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnRED_DATA
 {
     // total size: 0xC
@@ -347,7 +339,6 @@ typedef struct EnRED_DATA
     void *tp;         // offset 0x8, size 0x4
 } EnRED_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnONI_DATA
 {
     // total size: 0x10
@@ -359,7 +350,6 @@ typedef struct EnONI_DATA
     void *tp;     // offset 0xC, size 0x4
 } EnONI_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnNSE_DATA
 {
     // total size: 0xC
@@ -371,7 +361,6 @@ typedef struct EnNSE_DATA
     s_char dcm;   // offset 0xB, size 0x1
 } EnNSE_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnIKE_DATA
 {
     // total size: 0x20
@@ -385,7 +374,6 @@ typedef struct EnIKE_DATA
     s_char pipe_count; // offset 0x1F, size 0x1
 } EnIKE_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnPAP_DATA
 {
     // total size: 0x20
@@ -396,7 +384,6 @@ typedef struct EnPAP_DATA
     s_char count;    // offset 0x13, size 0x1
 } EnPAP_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnEDB_DATA
 {
     // total size: 0x30
@@ -413,7 +400,6 @@ typedef struct EnEDB_DATA
     s_char pcount;   // offset 0x24, size 0x1
 } EnEDB_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnARM_DATA
 {
     // total size: 0x30
@@ -429,7 +415,6 @@ typedef struct EnARM_DATA
     s_char dir;        // offset 0x2D, size 0x1
 } EnARM_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnBOS_DATA
 {
     // total size: 0x40
@@ -447,7 +432,6 @@ typedef struct EnBOS_DATA
     s_char count;     // offset 0x35, size 0x1
 } EnBOS_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnNIK_DATA
 {
     // total size: 0x20
@@ -455,7 +439,6 @@ typedef struct EnNIK_DATA
     float acc[4];   // offset 0x10, size 0x10
 } EnNIK_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnINS_DATA
 {
     // total size: 0x40
@@ -471,7 +454,6 @@ typedef struct EnINS_DATA
     float dist_add;    // offset 0x3C, size 0x4
 } EnINS_DATA;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_ty23.c
 typedef struct EnLOCAL_DATA
 {
     // total size: 0xE0
@@ -837,7 +819,6 @@ typedef struct shPlayerWork
     u_short attack_no;                    // offset 0x53A, size 0x2
 } shPlayerWork;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\chara_saveinfo.c
 typedef struct _Character_Info
 {
     // total size: 0x1430
@@ -852,7 +833,6 @@ typedef struct _Character_Info
     char total;                        // offset 0x1420, size 0x1
 } Character_Info;
 
-// E:\work\sh2(CVS全取得)\src\Chacter\m3_djames.c
 extern struct shPlayerWork sh2jms; // size: 0x540, address: 0x3C7EE0
 
 #endif CHARACTER_H
