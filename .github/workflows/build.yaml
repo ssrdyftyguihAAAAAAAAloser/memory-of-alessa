@@ -85,14 +85,15 @@ jobs:
             make -j $(nproc) sh2-report
           fi
 
-      - name: upload to decomp.dev
-        uses: actions/upload-artifact@v7
-        with:
-          name: ${{ matrix.TARGET.SERIAL }}_report
-          path: build/${{ matrix.TARGET.SERIAL }}/report.json
-
       - name: upload to silenthillmuseum.org
         env:
           SERIAL: ${{ matrix.TARGET.SERIAL }}
           PROGRESS_API_KEY: ${{ secrets.PROGRESS_API_KEY }}
         run: tools/scripts/upload-progress.sh
+
+      - name: release artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.TARGET.SERIAL }}_report
+          path: build/${{ matrix.TARGET.SERIAL }}/report.json
+        if: ${{ env.REPORT_STATUS == 'changed' }}
