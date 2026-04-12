@@ -408,6 +408,12 @@ HH_ClassWrapper_Point_Clip_Judge = 0x00142aa0;
 HH_ClassWrapper_ViewFrustum_Primitive_ClipMatrix_Get = 0x00142b40;
 HH_ClassWrapper_Float_Clamp = 0x00142be0;
 HH_ClassWrapper_SpotLight_ColorRatio_Calculator = 0x00142cb0;
+HH_ClassWrapper_ViewingFrustumParamerter_NearZ_Get = 0x00142BA0;
+HH_ClassWrapper_ViewingFrustumParamerter_FarZ_Get = 0x00142BB0;
+HH_ClassWrapper_WorldViewMatrix_Get = 0x00142B70;
+HH_ClassWrapper_ViewScreenMatrix_Get = 0x00142B80;
+HH_ClassWrapper_Matrix_Group_Update = 0x00142B10;
+sh3gde_getCameraDir = 0x001B42C0;
 
 // hh_classes
 HH_Class_pMain_0x2 = 0x00212b10;
@@ -738,7 +744,6 @@ func_0029F3D0 = 0x29F3D0;
 func_001433A0 = 0x1433A0;
 func_00124120 = 0x124120;
 func_001E08A0 = 0x1E08A0;
-func_001B42C0 = 0x1B42C0;
 func_0012F580 = 0x12F580;
 func_0016E0F0 = 0x16E0F0;
 func_0019F820 = 0x19F820;
