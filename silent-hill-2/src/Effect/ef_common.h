@@ -18,11 +18,11 @@ typedef struct EFCTAnimationData {
 // total size: 0x60
 typedef struct EFCTVertexData {
     // Members
-    float LocalPos[4]; // offset 0x0, size 0x10
-    float WorldPos[4]; // offset 0x10, size 0x10
+    float LocalPos[4]__attribute__((aligned(16))); // offset 0x0, size 0x10
+    float WorldPos[4]__attribute__((aligned(16))); // offset 0x10, size 0x10
     signed int ScreenPos[4]; // offset 0x20, size 0x10
     unsigned char rgba[4]; // offset 0x30, size 0x4
-    float stq[4]; // offset 0x40, size 0x10
+    float stq[4]__attribute__((aligned(16))); // offset 0x40, size 0x10
     signed short is_valid; // offset 0x50, size 0x2
 } EFCTVertexData;
 
@@ -37,14 +37,14 @@ typedef struct EFCTObject {
     float height; // offset 0xC, size 0x4
     unsigned short VertexNum; // offset 0x10, size 0x2
     unsigned short LayerNum; // offset 0x12, size 0x2
-    float trans[4]; // offset 0x20, size 0x10
-    float rot[4]; // offset 0x30, size 0x10
-    float Pos[4]; // offset 0x40, size 0x10
+    float trans[4]__attribute__((aligned(16))); // offset 0x20, size 0x10
+    float rot[4]__attribute__((aligned(16))); // offset 0x30, size 0x10
+    float Pos[4]__attribute__((aligned(16))); // offset 0x40, size 0x10
     signed short chara_kind; // offset 0x50, size 0x2
     signed short chara_id; // offset 0x52, size 0x2
     struct EFCTVertexData * pVertex; // offset 0x54, size 0x4
     struct EFCTAnimationData * pAnimData; // offset 0x58, size 0x4
-};
+} EFCTObject;
 
 void EFCTSetGunFire(float * pos /* r19 */, float * vec /* r18 */);
 void EFCTSetGunSmoke(float * pos);

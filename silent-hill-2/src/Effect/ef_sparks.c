@@ -1,4 +1,4 @@
-#include "ef_sparks.h"
+#include "Effect/ef_sparks.h"
 #include "SH2_common/sh_vu0.h"
 
 static void SetSparksSize(float* width, float* height);

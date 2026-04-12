@@ -375,6 +375,8 @@ segments:
       - [0x296e80, rodata,  rodata_0x296e80]
       - [0x2988d0, .rodata, Event/stg_overlay]
       - [0x298ac8, rodata,  rodata_0x298ac8]
+      - [0x298e00, .rodata, Effect/ef_sparks]
+      - [0x298e30, rodata,  rodata_0x298e30]
       - [0x29a230, .rodata, Event/stage/stg_tgs_trial]
       - [0x29a280, rodata,  rodata_0x29a280]
       - [0x29a870, .rodata, Effect2/hh_class_manager]
