@@ -3,7 +3,8 @@
 This is a styling guide for Silent Hill 2 & 3 repository, styling is not final if another styling is needed for matching or strings hint a style used by the developers, but it should be used in general to keep a standard in the codebase
 
 ## Types
-Follow the standard from `eetypes.h`, types used should be `sign_type` (`u_char`, `s_char`, `u_long`, `s_long`, etc.) for non floating point primitive types (`int` can be used without its signed counterpart)
+Types used should follow the `sign_type` pattern for all unsigned non floating point primitive types (`u_char`, `u_short`, `u_long`, etc..)
+All signed types can drop its signedness prefix except for char, which should use `s_char`
 
 ## Formatting
 There is a `.clang-format` file that can be applied to format the file, do note that clang-format trims empty whitespace lines, so it should be used carefully in files where DWARF line info matters
